@@ -13,19 +13,22 @@ const users = [
 ];
 
 // comment this out after completion and uncomment code below it to proceed
-function Child() {
-  return <div>This is children content</div>;
-}
-/**
-  Challenge: Uncomment this code to complete quiz
+  //Challenge: Uncomment this code to complete quiz
 
 function Child() {
   return (
     <>
+    return <div>This is children content</div>;
       <div>Child</div>
       <button>Change Parent Value</button>
     </>
   );
+}
+
+function ToggleChallenge(){
+  function handleClick(number) {
+    console.log(`Button ${number} was clicked`);
+  }
 }
 
 function Parent() {
@@ -47,31 +50,34 @@ function Parent() {
     </>
   );
 }
-Uncomment this to tackle quiz
-**/
+//Uncomment this to tackle quiz
+
 
 // Comment out after completion
-function Parent() {
-  return (
-    <div>
-      <h3>Parent Component</h3>
-    </div>
-  );
-}
-// Comment above code after completion
+// function Parent() {
+//   return (
+//     <div>
+//       <h3>Parent Component</h3>
+//     </div>
+//   );
+// }
+// // Comment above code after completion
 
 function App() {
   const [] = React.useState(true);
+
+ const userNames = users.map(element => element)
+ console.log(userNames)
   return (
     
     <>
-    
+    <h1>JSX is cool!</h1>
     <img src={logo} className="App-logo" alt="logo" />
-      <h3>User names</h3>
+      <h3>{userNames}</h3>
       <ul></ul>
       <button>Hide Element Below</button>
 
-      <div>Toggle Challenge</div>
+      <div> <button onClick={handleClick}>{ToggleChallenge}</button></div>
       <Parent>
       <Child />
     </Parent>
